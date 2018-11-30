@@ -32,6 +32,27 @@ function bool CheckReplacement(Actor Other)
 		Rx_InventoryManager_Nod_Engineer(Other).PrimaryWeapons[1] = class'OG_Weapon_RemoteC4';
 	}
 
+	else if (Other.IsA('Rx_InventoryManager_GDI_Havoc'))
+	{
+		Rx_InventoryManager_GDI_Havoc(Other).PrimaryWeapons[0] 	= 	class'OG_Weapon_RamjetRifle';
+	}
+
+	else if (Other.IsA('Rx_InventoryManager_Nod_Sakura'))
+	{
+		Rx_InventoryManager_Nod_Sakura(Other).PrimaryWeapons[0] 	= 	class'OG_Weapon_RamjetRifle';
+	}
+
+	else if (Other.IsA('Rx_InventoryManager_GDI_Deadeye'))
+	{
+		Rx_InventoryManager_GDI_Deadeye(Other).PrimaryWeapons[0] 	= 	class'OG_Weapon_SniperRifle';
+	}
+
+	else if (Other.IsA('Rx_InventoryManager_Nod_BlackHandSniper'))
+	{
+		Rx_InventoryManager_Nod_BlackHandSniper(Other).PrimaryWeapons[0] 	= 	class'OG_Weapon_SniperRifle';
+	}
+
+
 	else if(Other.IsA('Rx_TeamInfo'))
 		Rx_Game(WorldInfo.Game).PlayerControllerClass = class'OG_Controller';
 
