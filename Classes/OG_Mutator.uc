@@ -1,6 +1,6 @@
 /*
 * File: OG_Mutator
-* Description: Replaces weapons & turns off cooldown for refills.
+* Description: Replaces weapons & changes some default classes in Rx_Game.
 * Project: OGRenMutator https://github.com/sevans045/OGRenMutator/
 */
 
@@ -32,16 +32,28 @@ function bool CheckReplacement(Actor Other)
 
 	/** Snipers - Remove spread on sniper hip fire **/
 	else if (Other.IsA('Rx_InventoryManager_GDI_Havoc'))
+	{
 		Rx_InventoryManager_GDI_Havoc(Other).PrimaryWeapons[0] = class'OG_Weapon_RamjetRifle';
+		Rx_InventoryManager_GDI_Havoc(Other).AvailableAbilityWeapons[0] = None;
+	}
 
 	else if (Other.IsA('Rx_InventoryManager_Nod_Sakura'))
+	{
 		Rx_InventoryManager_Nod_Sakura(Other).PrimaryWeapons[0] = class'OG_Weapon_RamjetRifle';
+		Rx_InventoryManager_Nod_Sakura(Other).AvailableAbilityWeapons[0] = None;
+	}
 
 	else if (Other.IsA('Rx_InventoryManager_GDI_Deadeye'))
+	{
 		Rx_InventoryManager_GDI_Deadeye(Other).PrimaryWeapons[0] = class'OG_Weapon_SniperRifle';
+		Rx_InventoryManager_GDI_Deadeye(Other).AvailableAbilityWeapons[0] = None;
+	}
 
 	else if (Other.IsA('Rx_InventoryManager_Nod_BlackHandSniper'))
+	{
 		Rx_InventoryManager_Nod_BlackHandSniper(Other).PrimaryWeapons[0] = class'OG_Weapon_SniperRifle';
+		Rx_InventoryManager_Nod_BlackHandSniper(Other).AvailableAbilityWeapons[0] = None;
+	}
 
 	/** Anti Tank - Remove charge time, piercing and EMP grenades **/
 	else if (Other.IsA('Rx_InventoryManager_GDI_Sydney'))
@@ -62,9 +74,24 @@ function bool CheckReplacement(Actor Other)
 	else if (Other.IsA('Rx_InventoryManager_Nod_LaserChainGunner'))
 		Rx_InventoryManager_Nod_LaserChainGunner(Other).AvailableAbilityWeapons[0] = None;
 
+	/** Misc. - Remove grenades **/
+	else if (Other.IsA('Rx_InventoryManager_GDI_McFarland'))
+		Rx_InventoryManager_GDI_McFarland(Other).AvailableAbilityWeapons[0] = None;
+
+	else if (Other.IsA('Rx_InventoryManager_GDI_Officer'))
+		Rx_InventoryManager_GDI_Officer(Other).AvailableAbilityWeapons[0] = None;
+
+	else if (Other.IsA('Rx_InventoryManager_Nod_ChemicalTrooper'))
+		Rx_InventoryManager_Nod_ChemicalTrooper(Other).AvailableAbilityWeapons[0] = None;
+
+	else if (Other.IsA('Rx_InventoryManager_Nod_Officer'))
+		Rx_InventoryManager_Nod_Officer(Other).AvailableAbilityWeapons[0] = None;
 
 	else if(Other.IsA('Rx_TeamInfo'))
+	{
 		Rx_Game(WorldInfo.Game).PlayerControllerClass = class'OG_Controller';
+		Rx_Game(WorldInfo.Game).PurchaseSystemClass = class 'OG_PurchaseSystem';
+	}
 
 	return true;
 }
