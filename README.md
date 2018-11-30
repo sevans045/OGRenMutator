@@ -21,7 +21,7 @@ Blah blah ?SomePackage.SomeFile on the startup line of server.
 ## Authors
 
 * **John Doe** - *Author & Idea Master* - [vlatkozelka](https://github.com/vlatkozelka)
-* **Sarah Evans** - *Package Co-Author* - [BubbleTea](https://github.com/sevans045)
+* **Sarah Evans** - *Co-Author* - [BubbleTea](https://github.com/sevans045)
 
 See also the list of [contributors](https://github.com/sevans045/OGRenMutator/contributors) who participated in this project.
 
