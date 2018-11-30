@@ -10,7 +10,6 @@ function CheckProxy()
 {
 	local Rx_Pawn P;
 	local Rx_Vehicle V;
-	local vector endL, normthing; 
 	local vector ScanLoc;
 	
 	//Store our location, but scan from about 13 units above our location. 
