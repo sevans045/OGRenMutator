@@ -193,4 +193,8 @@ DefaultProperties
 	bLocSync = true;
 
 	CustomWeaponName = "Ramjet Rifle"
+
+	bPierceInfantry = true
+	MaximumPiercingAbility = 5
+	CurrentPiercingPower = 5
 }

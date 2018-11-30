@@ -254,4 +254,8 @@ DefaultProperties
 	bLocSync = true; 
 
 	CustomWeaponName = "Sniper Rifle"
+
+	bPierceInfantry = true
+	MaximumPiercingAbility = 5
+	CurrentPiercingPower = 5
 }
