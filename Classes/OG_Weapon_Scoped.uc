@@ -27,7 +27,7 @@ var float LastZoomPlaySoundTime, LastZoomPlaySoundTimeThreshold;
 /** Played when activate/deactivate night vision */
 var SoundCue NightVisionTurnOnSound, NightVisionTurnOffSound; 
 
-simulated function DrawZoomedOverlay( HUD H )
+simulated function DrawZoomedOverlay(HUD H)
 {
     local float ScaleX, ScaleY, StartX;
 	local float HMScale; 
@@ -65,7 +65,7 @@ simulated function DrawZoomedOverlay( HUD H )
 /*
  * Hides the crosshair when zoomed, as the overlay should have one
  */
-simulated function DrawCrosshair( Hud HUD )
+simulated function DrawCrosshair(Hud HUD)
 {
     local UTPlayerController PC;
 

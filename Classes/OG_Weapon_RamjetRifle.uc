@@ -11,7 +11,7 @@ var	SoundCue WeaponDistantFireSnd;	// A second firing sound to be played when we
 simulated function FireAmmunition()
 {
 	super.FireAmmunition();
-	WeaponPlaySound( WeaponDistantFireSnd );
+	WeaponPlaySound(WeaponDistantFireSnd);
 }
 
 simulated function bool IsInstantHit()
@@ -19,7 +19,7 @@ simulated function bool IsInstantHit()
 	return true; 
 }
 
-defaultproperties
+DefaultProperties
 {
     Begin Object class=AnimNodeSequence Name=MeshSequenceA
     End Object

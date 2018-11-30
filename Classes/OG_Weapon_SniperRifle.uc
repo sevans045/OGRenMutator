@@ -69,7 +69,7 @@ simulated function PostReloadUpdate()
 simulated function FireAmmunition()
 {
 	super.FireAmmunition();
-	WeaponPlaySound( WeaponDistantFireSnd );
+	WeaponPlaySound(WeaponDistantFireSnd);
 }
 
 simulated function bool IsInstantHit()
