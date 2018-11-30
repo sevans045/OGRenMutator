@@ -1,3 +1,9 @@
+/*
+* File: OG_Weapon_RamjetRifle
+* Description: Removes spread from ramjet.
+* Project: OGRenMutator https://github.com/sevans045/OGRenMutator/
+*/
+
 class OG_Weapon_RamjetRifle extends OG_Weapon_Scoped;
 
 var	SoundCue WeaponDistantFireSnd;	// A second firing sound to be played when weapon fires. (Used for distant sound)

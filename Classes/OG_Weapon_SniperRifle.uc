@@ -1,3 +1,9 @@
+/*
+* File: OG_Weapon_SniperRifle
+* Description: Removes spread from sniper.
+* Project: OGRenMutator https://github.com/sevans045/OGRenMutator/
+*/
+
 class OG_Weapon_SniperRifle extends OG_Weapon_Scoped;
 
 var MaterialInstanceConstant    MCounterTens, MCounterOnes;

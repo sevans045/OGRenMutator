@@ -1,3 +1,9 @@
+/*
+* File: OG_Weapon_Scoped
+* Description: Removes spread from sniper/ramjet.
+* Project: OGRenMutator https://github.com/sevans045/OGRenMutator/
+*/
+
 class OG_Weapon_Scoped extends Rx_Weapon_Reloadable;
 
 var bool bPlayZoomSoundWhenShowOverlay, bPlayZoomSoundWhenHideOverlay;
