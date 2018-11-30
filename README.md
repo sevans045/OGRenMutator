@@ -28,7 +28,7 @@ See also the list of [contributors](https://github.com/sevans045/OGRenMutator/co
 
 ## License
 
-This project is licensed under the GNU GPL v2 license - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU GPL v2 license - see the [LICENSE.md](https://github.com/sevans045/OGRenMutator/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 
