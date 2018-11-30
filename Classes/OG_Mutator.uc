@@ -1,6 +1,6 @@
 /*
 * File: OG_Mutator
-* Description: Replaces weapons.
+* Description: Replaces weapons & turns off cooldown for refills.
 * Project: OGRenMutator https://github.com/sevans045/OGRenMutator/
 */
 
@@ -31,6 +31,9 @@ function bool CheckReplacement(Actor Other)
 	{
 		Rx_InventoryManager_Nod_Engineer(Other).PrimaryWeapons[1] = class'OG_Weapon_RemoteC4';
 	}
+
+	else if(Other.IsA('Rx_TeamInfo'))
+		Rx_Game(WorldInfo.Game).PlayerControllerClass = class'OG_Controller';
 
 	return true;
 }
