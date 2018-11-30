@@ -1,9 +1,8 @@
 # OGRenMutator
 A mutator package for Renegade-X that is designed to replicate the gameplay and feel of original Renegade.
 
-## Changelist
+## What we changed
 
-Here we will list all of the changes we intend to make via this mutator.
 * Balancing: nerf infantry a bit, nerf flame tanks, make arties slower (or remove shift all together) , etc...
 * Lock the MRLS turret from turning. It used to be very helpful around corners and hill.
 * Remove refill timeout
