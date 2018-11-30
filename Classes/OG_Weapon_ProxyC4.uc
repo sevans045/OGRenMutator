@@ -20,7 +20,7 @@ function bool Deploy()
 	
 	if (!Rx_PRI(IPC.PlayerReplicationInfo).bCanMine) /*Nobody likes you; you can't use these things that have been badly designed for 12+ years now.*/
 	{	
-		IPC.CTextMessage("You are currently banned from Mining");
+		IPC.CTextMessage("You are currently banned from mining");
 		return false;
 	}
 	
