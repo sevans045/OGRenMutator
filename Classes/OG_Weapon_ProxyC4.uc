@@ -8,7 +8,7 @@ class OG_Weapon_ProxyC4 extends Rx_Weapon_Deployable;
 
 simulated function PerformRefill()
 {
-	CurrentAmmoInClip=default.ClipSize;
+	CurrentAmmoInClip = default.ClipSize;
 	AmmoCount = MaxAmmoCount;
 }
 
