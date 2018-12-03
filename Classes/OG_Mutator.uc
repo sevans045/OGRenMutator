@@ -7,10 +7,10 @@
 class OG_Mutator extends Rx_Mutator;
 
 function bool CheckReplacement(Actor Other)
-{
+{	
 	/** Advanced Engineers - Remotes can be detonated whenever and proxies are thrown **/
 	if (Other.IsA('Rx_InventoryManager_GDI_Hotwire'))
-	{
+	{		
 		Rx_InventoryManager_GDI_Hotwire(Other).ExplosiveWeapons[0] = class'OG_Weapon_ProxyC4';
 		Rx_InventoryManager_GDI_Hotwire(Other).AvailableExplosiveWeapons[0] = class'OG_Weapon_ProxyC4';
 		Rx_InventoryManager_GDI_Hotwire(Other).PrimaryWeapons[1] = class'OG_Weapon_RemoteC4';
