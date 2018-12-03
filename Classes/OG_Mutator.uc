@@ -1,6 +1,6 @@
 /*
 * File: OG_Mutator
-* Description: Replaces weapons & changes some default classes in Rx_Game.
+* Description: Replaces weapons, changes some default classes in Rx_Game, replaces Obelisk weapon.
 * Project: OGRenMutator https://github.com/sevans045/OGRenMutator/
 */
 
@@ -23,12 +23,14 @@ function bool CheckReplacement(Actor Other)
 		Rx_InventoryManager_Nod_Technician(Other).PrimaryWeapons[1] = class'OG_Weapon_RemoteC4';
 	}
 
+
 	/** Engineers - Remotes can be detonated whenever **/
 	else if (Other.IsA('Rx_InventoryManager_GDI_Engineer'))
 		Rx_InventoryManager_GDI_Engineer(Other).PrimaryWeapons[1] = class'OG_Weapon_RemoteC4';
 
 	else if (Other.IsA('Rx_InventoryManager_Nod_Engineer'))
 		Rx_InventoryManager_Nod_Engineer(Other).PrimaryWeapons[1] = class'OG_Weapon_RemoteC4';
+
 
 	/** Snipers - Remove spread on sniper hip fire **/
 	else if (Other.IsA('Rx_InventoryManager_GDI_Havoc'))
@@ -55,24 +57,39 @@ function bool CheckReplacement(Actor Other)
 		Rx_InventoryManager_Nod_BlackHandSniper(Other).AvailableAbilityWeapons[0] = None;
 	}
 
-	/** Anti Tank - Remove charge time, piercing and EMP grenades **/
+	/** Anti Tank - Remove charge time, add piercing (Rav/Syd), remove EMP grenades and AT mines **/
 	else if (Other.IsA('Rx_InventoryManager_GDI_Sydney'))
 	{
 		Rx_InventoryManager_GDI_Sydney(Other).PrimaryWeapons[0] = class'OG_Weapon_PersonalIonCannon';
 		Rx_InventoryManager_GDI_Sydney(Other).AvailableAbilityWeapons[0] = None;
+		Rx_InventoryManager_GDI_Sydney(Other).PrimaryWeapons[2] = None;
 	}
 
 	else if (Other.IsA('Rx_InventoryManager_GDI_Gunner'))
+	{
 		Rx_InventoryManager_GDI_Gunner(Other).AvailableAbilityWeapons[0] = None;
+		Rx_InventoryManager_GDI_Gunner(Other).PrimaryWeapons[2] = None;
+	}
 
 	else if (Other.IsA('Rx_InventoryManager_Nod_Raveshaw'))
 	{
 		Rx_InventoryManager_Nod_Raveshaw(Other).PrimaryWeapons[0] = class'OG_Weapon_Railgun';
 		Rx_InventoryManager_Nod_Raveshaw(Other).AvailableAbilityWeapons[0] = None;
+		Rx_InventoryManager_Nod_Raveshaw(Other).PrimaryWeapons[1] = None;
 	}
 
 	else if (Other.IsA('Rx_InventoryManager_Nod_LaserChainGunner'))
+	{
 		Rx_InventoryManager_Nod_LaserChainGunner(Other).AvailableAbilityWeapons[0] = None;
+		Rx_InventoryManager_Nod_LaserChainGunner(Other).PrimaryWeapons[2] = None;
+	}
+
+	else if (Other.IsA('Rx_InventoryManager_Nod_RocketSoldier'))
+		Rx_InventoryManager_Nod_RocketSoldier(Other).PrimaryWeapons[1] = None;
+
+	else if (Other.IsA('Rx_InventoryManager_GDI_RocketSoldier'))
+		Rx_InventoryManager_GDI_RocketSoldier(Other).PrimaryWeapons[1] = None;
+
 
 	/** Misc. - Remove grenades **/
 	else if (Other.IsA('Rx_InventoryManager_GDI_McFarland'))
@@ -87,6 +104,13 @@ function bool CheckReplacement(Actor Other)
 	else if (Other.IsA('Rx_InventoryManager_Nod_Officer'))
 		Rx_InventoryManager_Nod_Officer(Other).AvailableAbilityWeapons[0] = None;
 
+
+	/** Obelisk - Remove charge hold time **/
+	else if (Other.IsA('Rx_Sentinel_Obelisk_Laser_Base'))
+		Rx_Sentinel_Obelisk_Laser_Base(Other).DefaultWeaponClass = class'OG_SentinelWeapon_Obelisk';
+
+
+	/** Rx_Game - Removes airstrikes, repair tools and refill cooldown time **/
 	else if(Other.IsA('Rx_TeamInfo'))
 	{
 		Rx_Game(WorldInfo.Game).PlayerControllerClass = class'OG_Controller';
