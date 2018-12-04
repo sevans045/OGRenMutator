@@ -1,16 +1,17 @@
 /*
 * File: OG_Mutator
-* Description: Replaces weapons, changes some default classes in Rx_Game, replaces Obelisk weapon.
+* Description: Replaces/removes weapons & replaces Obelisk weapon.
 * Project: OGRenMutator https://github.com/sevans045/OGRenMutator/
 */
 
 class OG_Mutator extends Rx_Mutator;
 
+/** We use this function to replace a lot of different things, instead of overwriting their classes **/
 function bool CheckReplacement(Actor Other)
-{
+{	
 	/** Advanced Engineers - Remotes can be detonated whenever and proxies are thrown **/
 	if (Other.IsA('Rx_InventoryManager_GDI_Hotwire'))
-	{
+	{		
 		Rx_InventoryManager_GDI_Hotwire(Other).ExplosiveWeapons[0] = class'OG_Weapon_ProxyC4';
 		Rx_InventoryManager_GDI_Hotwire(Other).AvailableExplosiveWeapons[0] = class'OG_Weapon_ProxyC4';
 		Rx_InventoryManager_GDI_Hotwire(Other).PrimaryWeapons[1] = class'OG_Weapon_RemoteC4';
@@ -108,14 +109,6 @@ function bool CheckReplacement(Actor Other)
 	/** Obelisk - Remove charge hold time **/
 	else if (Other.IsA('Rx_Sentinel_Obelisk_Laser_Base'))
 		Rx_Sentinel_Obelisk_Laser_Base(Other).DefaultWeaponClass = class'OG_SentinelWeapon_Obelisk';
-
-
-	/** Rx_Game - Removes airstrikes, repair tools and refill cooldown time **/
-	else if(Other.IsA('Rx_TeamInfo'))
-	{
-		Rx_Game(WorldInfo.Game).PlayerControllerClass = class'OG_Controller';
-		Rx_Game(WorldInfo.Game).PurchaseSystemClass = class 'OG_PurchaseSystem';
-	}
 
 	return true;
 }
