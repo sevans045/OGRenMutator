@@ -26,17 +26,17 @@ DefaultProperties
     End Object
 
     // Weapon SkeletalMesh
-    Begin Object Name=FirstPersonMesh
-        SkeletalMesh=SkeletalMesh'RX_WP_PersonalIonCannon.Mesh.SK_PersonalIonCannon_1P'
-        AnimSets(0)=AnimSet'RX_WP_PersonalIonCannon.Anims.AS_PersonalIonCannon_1P'
-        Animations=MeshSequenceA
+    Begin Object Name = FirstPersonMesh
+        SkeletalMesh = SkeletalMesh'RX_WP_PersonalIonCannon.Mesh.SK_PersonalIonCannon_1P'
+        AnimSets(0) = AnimSet'RX_WP_PersonalIonCannon.Anims.AS_PersonalIonCannon_1P'
+        Animations = MeshSequenceA
         FOV=55
 		Scale=2.0
     End Object
 
     // Weapon SkeletalMesh
-    Begin Object Name=PickupMesh
-        SkeletalMesh=SkeletalMesh'RX_WP_PersonalIonCannon.Mesh.SK_PersonalIonCannon_Back'
+    Begin Object Name = PickupMesh
+        SkeletalMesh = SkeletalMesh'RX_WP_PersonalIonCannon.Mesh.SK_PersonalIonCannon_Back'
         Scale=1.0
     End Object
 
@@ -46,8 +46,8 @@ DefaultProperties
 	
 	PlayerViewOffset=(X=-2.0,Y=0.0,Z=-1.0)
 	
-	LeftHandIK_Offset=(X=0,Y=-1,Z=-0.5)
-	RightHandIK_Offset=(X=0,Y=0,Z=0)
+	LeftHandIK_Offset = (X=0,Y=-1,Z=-0.5)
+	RightHandIK_Offset = (X=0,Y=0,Z=0)
 	LeftHandIK_Relaxed_Offset = (X=2.0,Y=-2.5,Z=4.0)
 	
 	//-------------- Recoil
@@ -66,45 +66,45 @@ DefaultProperties
 	RecoilSpreadDeclineSpeed = 0.02
 	RecoilSpreadCrosshairScaling = 3000;
 
-    ShotCost(0)=1
-    ShotCost(1)=0
-	ShouldFireOnRelease(0)=1
-	ShouldFireOnRelease(1)=0
-    FireInterval(0)=+0.5
-    FireInterval(1)=+0.0
+    ShotCost(0) = 1
+    ShotCost(1) = 0
+	ShouldFireOnRelease(0) = 1
+	ShouldFireOnRelease(1) = 0
+    FireInterval(0) =+ 0.5
+    FireInterval(1) =+ 0.0
     ReloadTime(0) = 3.5
     ReloadTime(1) = 3.5
     
-    EquipTime=1.0
+    EquipTime = 1.0
     
-    WeaponRange=5600.0
+    WeaponRange = 5600.0
 
-    LockerRotation=(pitch=0,yaw=0,roll=-16384)
+    LockerRotation = (pitch = 0, yaw = 0, roll =- 16384)
 
-    WeaponFireTypes(0)=EWFT_InstantHit
-    WeaponFireTypes(1)=EWFT_None
+    WeaponFireTypes(0) = EWFT_InstantHit
+    WeaponFireTypes(1) = EWFT_None
 
-    InstantHitDamage(0)=200
-    InstantHitDamage(1)=0
+    InstantHitDamage(0) = 200
+    InstantHitDamage(1) = 0
     
     BotDamagePercentage = 0.6;
 
-    InstantHitDamageTypes(0)=class'Rx_DmgType_PersonalIonCannon'
-    InstantHitDamageTypes(1)=None
+    InstantHitDamageTypes(0) =class'Rx_DmgType_PersonalIonCannon'
+    InstantHitDamageTypes(1) =None
 
-    InstantHitMomentum(0)=30000
-    InstantHitMomentum(1)=0
+    InstantHitMomentum(0) = 30000
+    InstantHitMomentum(1) = 0
 
-    Spread(0)=0.01
-	IronSightAndScopedSpread(0)= 0.0
+    Spread(0) = 0.01
+	IronSightAndScopedSpread(0 )= 0.0
 
     ClipSize = 4
     InitalNumClips = 12
     MaxClips = 12
 	
 	bAutoFire = false
-	BoltActionReload=true
-	bUnzoomDuringBoltActionReloading=false
+	BoltActionReload = true
+	bUnzoomDuringBoltActionReloading = false
 	BoltReloadTime(0) = 2.5f
 	BoltReloadTime(1) = 2.5f
 
@@ -122,7 +122,7 @@ DefaultProperties
 	RefireBoltReloadInterrupt(1) = 1.1f
 
     WeaponFireSnd[0]=SoundCue'RX_WP_PersonalIonCannon.Sounds.SC_PIC_Fire'
-    WeaponFireSnd[1]=None
+    WeaponFireSnd[1] = None
 	
 	WeaponDistantFireSnd=SoundCue'RX_WP_PersonalIonCannon.Sounds.SC_PersonalIonCannon_DistantFire'
 

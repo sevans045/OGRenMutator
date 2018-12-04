@@ -21,7 +21,7 @@ simulated function int GetVehiclePrices(byte teamID, int VehicleID, bool bViaAir
 	Multiplier = 1.0;
 	
 	if (PowerPlants[teamID] != None && PowerPlants[teamID].IsDestroyed()) 
-		Multiplier = 1.5; // if powerplant is dead then everything costs [REDACTED] 1 and a half times as much
+		Multiplier = 1.5; // if powerplant is dead then everything costs 1 and a half times as much
 	
 	if(bViaAirdrop)
 		Multiplier *= 2.0;
@@ -84,20 +84,20 @@ DefaultProperties
 	NodItemClasses[2] = None
 
 	//replace the MRLS with OG_MRLS
-	OGVehicleClasses[0]   = class'RenX_Game.Rx_Vehicle_GDI_Humvee_PTInfo'
-	OGVehicleClasses[1]   = class'RenX_Game.Rx_Vehicle_GDI_APC_PTInfo'
-	OGVehicleClasses[2]   = class'OGRenMutator.OG_Vehicle_GDI_MRLS_PTInfo'
-	OGVehicleClasses[3]   = class'RenX_Game.Rx_Vehicle_GDI_MediumTank_PTInfo'
-	OGVehicleClasses[4]   = class'RenX_Game.Rx_Vehicle_GDI_MammothTank_PTInfo'
-	OGVehicleClasses[5]   = class'RenX_Game.Rx_Vehicle_GDI_Chinook_PTInfo'
-	OGVehicleClasses[6]   = class'RenX_Game.Rx_Vehicle_GDI_Orca_PTInfo'
+	OGVehicleClasses[0] = class'RenX_Game.Rx_Vehicle_GDI_Humvee_PTInfo'
+	OGVehicleClasses[1] = class'RenX_Game.Rx_Vehicle_GDI_APC_PTInfo'
+	OGVehicleClasses[2] = class'OGRenMutator.OG_Vehicle_GDI_MRLS_PTInfo'
+	OGVehicleClasses[3] = class'RenX_Game.Rx_Vehicle_GDI_MediumTank_PTInfo'
+	OGVehicleClasses[4] = class'RenX_Game.Rx_Vehicle_GDI_MammothTank_PTInfo'
+	OGVehicleClasses[5] = class'RenX_Game.Rx_Vehicle_GDI_Chinook_PTInfo'
+	OGVehicleClasses[6] = class'RenX_Game.Rx_Vehicle_GDI_Orca_PTInfo'
 
-	OGNodVehicleClasses[0]   = class'RenX_Game.Rx_Vehicle_Nod_Buggy_PTInfo'
-	OGNodVehicleClasses[1]   = class'RenX_Game.Rx_Vehicle_Nod_APC_PTInfo'
-	OGNodVehicleClasses[2]   = class'RenX_Game.Rx_Vehicle_Nod_Artillery_PTInfo'
-	OGNodVehicleClasses[3]   = class'RenX_Game.Rx_Vehicle_Nod_FlameTank_PTInfo'
-	OGNodVehicleClasses[4]   = class'RenX_Game.Rx_Vehicle_Nod_LightTank_PTInfo'
-	OGNodVehicleClasses[5]   = class'RenX_Game.Rx_Vehicle_Nod_StealthTank_PTInfo'
-	OGNodVehicleClasses[6]   = class'RenX_Game.Rx_Vehicle_Nod_Chinook_PTInfo'
-	OGNodVehicleClasses[7]   = class'RenX_Game.Rx_Vehicle_Nod_Apache_PTInfo'
+	OGNodVehicleClasses[0] = class'RenX_Game.Rx_Vehicle_Nod_Buggy_PTInfo'
+	OGNodVehicleClasses[1] = class'RenX_Game.Rx_Vehicle_Nod_APC_PTInfo'
+	OGNodVehicleClasses[2] = class'RenX_Game.Rx_Vehicle_Nod_Artillery_PTInfo'
+	OGNodVehicleClasses[3] = class'RenX_Game.Rx_Vehicle_Nod_FlameTank_PTInfo'
+	OGNodVehicleClasses[4] = class'RenX_Game.Rx_Vehicle_Nod_LightTank_PTInfo'
+	OGNodVehicleClasses[5] = class'RenX_Game.Rx_Vehicle_Nod_StealthTank_PTInfo'
+	OGNodVehicleClasses[6] = class'RenX_Game.Rx_Vehicle_Nod_Chinook_PTInfo'
+	OGNodVehicleClasses[7] = class'RenX_Game.Rx_Vehicle_Nod_Apache_PTInfo'
 }
