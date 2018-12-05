@@ -26,7 +26,7 @@ DefaultProperties
     End Object
 
     // Weapon SkeletalMesh
-    Begin Object Name = FirstPersonMesh
+    Begin Object Name=FirstPersonMesh
         SkeletalMesh = SkeletalMesh'RX_WP_PersonalIonCannon.Mesh.SK_PersonalIonCannon_1P'
         AnimSets(0) = AnimSet'RX_WP_PersonalIonCannon.Anims.AS_PersonalIonCannon_1P'
         Animations = MeshSequenceA
@@ -35,7 +35,7 @@ DefaultProperties
     End Object
 
     // Weapon SkeletalMesh
-    Begin Object Name = PickupMesh
+    Begin Object Name=PickupMesh
         SkeletalMesh = SkeletalMesh'RX_WP_PersonalIonCannon.Mesh.SK_PersonalIonCannon_Back'
         Scale=1.0
     End Object
@@ -79,7 +79,7 @@ DefaultProperties
     
     WeaponRange = 5600.0
 
-    LockerRotation = (pitch = 0, yaw = 0, roll =- 16384)
+    LockerRotation = (pitch=0,yaw=0,roll=-16384)
 
     WeaponFireTypes(0) = EWFT_InstantHit
     WeaponFireTypes(1) = EWFT_None
