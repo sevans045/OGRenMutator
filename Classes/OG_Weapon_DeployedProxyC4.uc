@@ -38,3 +38,8 @@ function CheckProxy()
       	}
    }
 }
+
+event HitWall(vector HitNormal, Actor Wall, PrimitiveComponent WallComp)
+{
+	Super(Rx_Weapon_DeployedC4).HitWall(HitNormal, Wall, WallComp);
+}
