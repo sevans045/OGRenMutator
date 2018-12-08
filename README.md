@@ -12,11 +12,18 @@ A mutator package for Renegade-X that is designed to replicate the gameplay and 
 
 ## How to install
 
-Which file to download and where to put it.
+Download OGRenMutator.u and place in your UDKGame\CookedPC\ directory.
+```
+Example directory: C:\Program Files (x86)\Renegade X\UDKGame\CookedPC\
+```
 
 ## How to use
 
-Blah blah ?SomePackage.SomeFile on the startup line of server.
+Add ?Game=OGRenMutator.OG_Game?Mutatorss=OGRenMutator.OG_Mutator on the startup line of server.
+```
+Example startup: start Binaries\Win32\UDK.exe server CNC-Field?Game=OGRenMutator.OG_Game?Mutator=OGRenMutator.OG_Mutator?AdminPassword=admin -debug -SCRIPTSTACKONWARNINGS -UTRACE -NOSTEAM
+
+```
 
 ## Authors
 
