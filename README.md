@@ -19,7 +19,7 @@ Example directory: C:\Program Files (x86)\Renegade X\UDKGame\CookedPC\
 
 ## How to use
 
-Add ?Game=OGRenMutator.OG_Game?Mutatorss=OGRenMutator.OG_Mutator on the startup line of server.
+Add ?Game=OGRenMutator.OG_Game?Mutators=OGRenMutator.OG_Mutator on the startup line of server.
 ```
 Example startup: start Binaries\Win32\UDK.exe server CNC-Field?Game=OGRenMutator.OG_Game?Mutator=OGRenMutator.OG_Mutator?AdminPassword=admin -debug -SCRIPTSTACKONWARNINGS -UTRACE -NOSTEAM
 
