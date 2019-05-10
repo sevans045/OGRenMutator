@@ -27,8 +27,7 @@ Example startup: start Binaries\Win32\UDK.exe server CNC-Field?Game=OGRenMutator
 
 ## Authors
 
-* **John Doe** - *Author & Idea Master* - [vlatkozelka](https://github.com/vlatkozelka)
-* **Sarah Evans** - *Co-Author* - [BubbleTea](https://github.com/sevans045)
+* **Sarah Evans** - *Author* - [Sarah](https://github.com/sevans045)
 
 See also the list of [contributors](https://github.com/sevans045/OGRenMutator/contributors) who participated in this project.
 
