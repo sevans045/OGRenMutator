@@ -14,19 +14,6 @@ simulated function FireAmmunition()
 	WeaponPlaySound(WeaponDistantFireSnd);
 }
 
-simulated state BoltActionReloading
-{
-    simulated function BeginState( name PreviousState )
-    {
-        if(WorldInfo.NetMode == NM_StandAlone)
-        {
-        	PlayWeaponBoltReloadAnim();
-        	PlaySound( BoltReloadSound[CurrentFireMode], false,true);
-        }
-        super.BeginState(PreviousState);
-    }
-}
-
 simulated function bool IsInstantHit()
 {
 	return true; 
@@ -73,9 +60,9 @@ DefaultProperties
 	//-------------- Recoil
 	RecoilDelay = 0.07
 	RecoilSpreadDecreaseDelay = 0.1
-	MinRecoil = 400.0
-	MaxRecoil = 600.0
-	MaxTotalRecoil = 5000.0
+	MinRecoil = 0.0
+	MaxRecoil = 0.0
+	MaxTotalRecoil = 0.0
 	RecoilYawModifier = 0.5 // will be a random value between 0 and this value for every shot
 	RecoilInterpSpeed = 10.0
 	RecoilDeclinePct = 0.5
@@ -117,21 +104,21 @@ DefaultProperties
 	Spread(0)=0.01
 	IronSightAndScopedSpread(0)= 0.0
   
-    ClipSize = 4
-    InitalNumClips = 12
-    MaxClips = 12
+    ClipSize = 1
+    InitalNumClips = 31
+    MaxClips = 31
 	
 	bAutoFire = false
 	BoltActionReload=true
 	BoltReloadTime(0) = 2.5f
 	BoltReloadTime(1) = 2.5f
 
-    ReloadAnimName(0) = "weaponreload"
-    ReloadAnimName(1) = "weaponreload"
+    ReloadAnimName(0) = "WeaponBoltReload"
+    ReloadAnimName(1) = "WeaponBoltReload"
     ReloadAnim3PName(0) = "H_M_Autorifle_Reload"
     ReloadAnim3PName(1) = "H_M_Autorifle_Reload"
-    ReloadArmAnimName(0) = "weaponreload"
-    ReloadArmAnimName(1) = "weaponreload"
+    ReloadArmAnimName(0) = "WeaponBoltReload"
+    ReloadArmAnimName(1) = "WeaponBoltReload"
 	
 	BoltReloadAnimName(0) = "WeaponBoltReload"
 	BoltReloadAnimName(1) = "WeaponBoltReload"
@@ -192,7 +179,7 @@ DefaultProperties
 	//==========================================
 	
 	// IronSight:
-	bIronSightCapable = true	
+	bIronSightCapable = false	
 	bDisplayCrosshairInIronsight = false
 	IronSightViewOffset=(X=-4.0,Y=-7.275,Z=0.4)
 	IronSightFireOffset=(X=0,Y=0,Z=-5)

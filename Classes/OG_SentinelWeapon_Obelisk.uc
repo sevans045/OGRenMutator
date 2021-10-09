@@ -59,4 +59,18 @@ DefaultProperties
 {
 	WindDownDelay = 0.1f // Don't change this
 	TimeToHoldCharge = 1.2f // Change this as you'd like, though 1.2 seems good
+
+    Begin Object Name=WindUpSound0
+        SoundCue=SoundCue'RenX_BuildingSounds.Barracks.obelpowrCue'
+        bStopWhenOwnerDestroyed=true
+    End Object
+
+    Begin Object Name=FireInfo0
+        Damage=300.0
+        FireInterval = 4.0
+        DamageType=class'Rx_DmgType_Obelisk'
+        MaxRange=7000.0
+        FireSound=SoundCue'RenX_BuildingSounds.Obelisk.obelray1Cue'
+    End Object
+    FireInfo=FireInfo0
 }

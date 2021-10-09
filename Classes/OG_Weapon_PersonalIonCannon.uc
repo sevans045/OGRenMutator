@@ -98,9 +98,9 @@ DefaultProperties
     Spread(0) = 0.01
 	IronSightAndScopedSpread(0 )= 0.0
 
-    ClipSize = 4
-    InitalNumClips = 12
-    MaxClips = 12
+    ClipSize = 1
+    InitalNumClips = 31
+    MaxClips = 31
 	
 	bAutoFire = false
 	BoltActionReload = true
@@ -170,7 +170,7 @@ DefaultProperties
 	//==========================================
 	
 	// IronSight:
-	bIronSightCapable = true	
+	bIronSightCapable = false	
 	bDisplayCrosshairInIronsight = false
 	IronSightViewOffset=(X=-10.0,Y=-6.39,Z=0.83)
 	IronSightFireOffset=(X=0,Y=0,Z=-5)
